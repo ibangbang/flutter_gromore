@@ -1,0 +1,77 @@
+buildscript {
+    ext.kotlin_version = '1.8.10'
+   repositories {
+      maven { url 'https://artifact.bytedance.com/repository/AwemeOpenSDK' }
+    maven {
+            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_support/"
+        }
+        // GroMore SDK
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle'
+        }
+          maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url 'https://jitpack.io' }
+           maven { url 'http://download.flutter.io' 
+        allowInsecureProtocol = true}
+        maven { 
+            url = "http://repo.maven.apache.org/maven2"
+            allowInsecureProtocol = true
+        } 
+         maven { url 'https://artifact.bytedance.com/repository/AwemeOpenSDK' }
+    maven {
+            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_support/"
+        }
+        // GroMore SDK
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle'
+        }
+    }
+
+    dependencies {
+        // classpath 'com.android.tools.build:gradle:4.1.0'
+        // classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+          maven { url 'https://artifact.bytedance.com/repository/AwemeOpenSDK' }
+    maven {
+            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_support/"
+        }
+        // GroMore SDK
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle'
+        }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url 'http://download.flutter.io' 
+        allowInsecureProtocol = true}
+        maven { url 'https://jitpack.io' }
+        google()
+        maven { 
+            url = "http://repo.maven.apache.org/maven2"
+            allowInsecureProtocol = true
+        } 
+      
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

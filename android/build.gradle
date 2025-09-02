@@ -1,0 +1,81 @@
+group 'net.niuxiaoer.flutter_gromore'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.8.10'
+    repositories {
+        google()
+        mavenCentral()
+        //mintegral sdk依赖   引入mintegral sdk需要添加此maven
+        maven {
+            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_support/"
+        }
+        // GroMore SDK
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle'
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        //mintegral sdk依赖   引入mintegral sdk需要添加此maven
+        maven {
+            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_support/"
+        }
+        // GroMore SDK
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle'
+        }
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdk 33
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        minSdkVersion 24
+    }
+}
+
+repositories {
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:1.3.1"
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+
+
+    // 融合SDK
+    //implementation(name:'open_ad_sdk_6.0.1.4',ext:"aar")
+    // implementation files('lib/open_ad_sdk_6.0.1.4.aar')
+    compileOnly files('lib/open_ad_sdk_6.8.4.0.aar')
+    // compileOnly "com.pangle.cn:mediation-sdk:6.8.4.0"
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+}

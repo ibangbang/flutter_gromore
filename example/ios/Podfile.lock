@@ -1,0 +1,65 @@
+PODS:
+  - Ads-Fusion-CN-Beta/BUAdSDK (6.0.0.5)
+  - Ads-Fusion-CN-Beta/CSJMediation (6.0.0.5):
+    - Ads-Fusion-CN-Beta/BUAdSDK
+  - BaiduMobAdSDK (5.34)
+  - CSJMBaiduAdapter (5.34.0):
+    - Ads-Fusion-CN-Beta/CSJMediation (>= 6.0.0.5)
+  - CSJMGdtAdapter (4.14.63.0):
+    - Ads-Fusion-CN-Beta/CSJMediation (>= 6.0.0.2)
+  - CSJMKsAdapter (3.3.61.0.0):
+    - Ads-Fusion-CN-Beta/CSJMediation (>= 6.0.0.2)
+  - Flutter (1.0.0)
+  - flutter_gromore (0.0.1):
+    - Flutter
+  - GDTMobSDK (4.14.63):
+    - GDTMobSDK/GDTMobSDK (= 4.14.63)
+  - GDTMobSDK/GDTMobSDK (4.14.63)
+  - KSAdSDK (3.3.61)
+  - permission_handler_apple (9.1.0):
+    - Flutter
+
+DEPENDENCIES:
+  - BaiduMobAdSDK (= 5.34)
+  - CSJMBaiduAdapter (= 5.34.0)
+  - CSJMGdtAdapter (= 4.14.63.0)
+  - CSJMKsAdapter (= 3.3.61.0)
+  - Flutter (from `Flutter`)
+  - flutter_gromore (from `.symlinks/plugins/flutter_gromore/ios`)
+  - GDTMobSDK (= 4.14.63)
+  - KSAdSDK (= 3.3.61.0)
+  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Ads-Fusion-CN-Beta
+    - BaiduMobAdSDK
+    - CSJMBaiduAdapter
+    - CSJMGdtAdapter
+    - CSJMKsAdapter
+    - GDTMobSDK
+    - KSAdSDK
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_gromore:
+    :path: ".symlinks/plugins/flutter_gromore/ios"
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
+
+SPEC CHECKSUMS:
+  Ads-Fusion-CN-Beta: 151539e60342aa6096b7eef4358570abce27b216
+  BaiduMobAdSDK: debcb4e54e00b461ae6b8f6fb8ee232d872cb42e
+  CSJMBaiduAdapter: 966e2992ad47a3b589a979f295b2a2a2212b0ee2
+  CSJMGdtAdapter: af4675b025885fe2a482b91baae2d27e56001510
+  CSJMKsAdapter: 78a2ae637a45e3e2c1c307697da357d25ebd5339
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_gromore: 0cc907e4b4629d7fbe7ba112dd2c581f5b96fba0
+  GDTMobSDK: 12270ef644af85e8032974b1a75df90593e96d1d
+  KSAdSDK: 7754afd132df893c0c7a493fa878cbee7af6ff3c
+  permission_handler_apple: 8f116445eff3c0e7c65ad60f5fef5490aa94b4e4
+
+PODFILE CHECKSUM: d3a397fa9a659c7ef9e35bec3c214a50e588313b
+
+COCOAPODS: 1.15.2

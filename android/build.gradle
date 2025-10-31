@@ -74,7 +74,7 @@ dependencies {
     // 融合SDK
     //implementation(name:'open_ad_sdk_6.0.1.4',ext:"aar")
     // implementation files('lib/open_ad_sdk_6.0.1.4.aar')
-    compileOnly files('lib/open_ad_sdk_6.8.4.0.aar')
+    compileOnly files('lib/open_ad_sdk_7.2.0.9.aar')
     // compileOnly "com.pangle.cn:mediation-sdk:6.8.4.0"
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
     implementation 'com.jaeger.statusbarutil:library:1.5.1'
